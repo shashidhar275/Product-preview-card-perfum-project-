@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiko&display=swap" rel="stylesheet">
+  <link rel="fevicon" href="images/favicon-32x32.png">
+  <title>Frontend Mentor | Product preview card component</title>
+
+
+  <style>
+    p {
+      width: 60%;
+      line-height: 2;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 500 700;
+      margin-bottom: 30px;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+
+    del {
+      margin-left: 20px;
+      position: relative;
+      bottom: 8px;
+    }
+
+
+
+
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+
+    .btn {
+      -webkit-border-radius: 7;
+      -moz-border-radius: 7;
+      border-radius: 7px;
+      font-family: Arial;
+      color: #ffffff;
+      font-size: 20px;
+      background: hsl(158, 36%, 37%);
+      padding: 20px 20px 20px 20px;
+      text-decoration: none;
+    }
+
+
+    .btn:hover {
+      background: #b8603d;
+      text-decoration: none;
+    }
+
+
+
+
+    .home-div {
+      position: relative;
+      background-color: hsl(30, 38%, 92%);
+      height: 1000px;
+      width: 1400px;
+    }
+
+
+    .product-image-div {
+      margin: auto;
+      position: absolute;
+      right: 700px;
+      top: 150px;
+      bottom: 150px;
+      display: inline-block;
+      width: 540px;
+      height: 740px;
+      border-radius: 20px 0 0 25px;
+    }
+
+
+    .text-div {
+      margin: auto;
+      background-color: hsl(0, 0%, 100%);
+      position: absolute;
+      top: 150px;
+      bottom: 150px;
+      left: 700px;
+      display: inline-block;
+      height: 600px;
+      width: 400px;
+      padding: 5%;
+      border-radius: 0 25px 25px 0;
+    }
+
+
+
+
+    .topic {
+      font-family: 'Amiko', sans-serif;
+    }
+
+    .t-c {
+      color: hsl(228, 12%, 48%);
+    }
+
+    .text-title {
+      font-family: 'Fraunces', serif;
+      color: hsl(212, 21%, 14%);
+      font-weight: 700;
+      width: 50%;
+    }
+
+
+    .p-img {
+      height: 740px;
+      width: 540px;
+      border-radius: 20px 0 0 25px;
+    }
+
+
+    .rs {
+      display: inline-block;
+    }
+
+
+    .real-rs {
+      font-family: 'Fraunces', serif;
+      color: hsl(158, 36%, 37%);
+    }
+
+
+
+
+
+    @media only screen and (max-width: 1449px) {
+      .home-div {
+        position: relative;
+        width: 100%;
+      }
+
+
+      .product-image-div {
+        margin: 0 auto 0 auto;
+        position: absolute;
+        right: 50%;
+        width: 190px;
+        height: 300px;
+        border-radius: 10px 0 0 10px;
+      }
+
+
+      .text-div {
+        margin: 0 auto 0 auto;
+        position: absolute;
+        left: 50%;
+        height: 260px;
+        width: 150px;
+        padding: 20px;
+        border-radius: 0 10px 10px 0;
+      }
+
+      .text-title {
+        font-weight: 100;
+        width: 70%;
+        font-size: smaller;
+      }
+
+      .p-img {
+        height: 300px;
+        width: 190px;
+        border-radius: 10px 0 0 10px;
+      }
+
+      .topic {
+        font-size: xx-small;
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+
+      p {
+        width: 100%;
+        line-height: 2;
+        font-size: 7px;
+        font-weight: 500 700;
+        margin-bottom: 15px;
+        margin-top: 18px;
+      }
+
+
+      a {
+        margin-top: 30px;
+      }
+
+
+      del {
+        margin-left: 5px;
+        position: relative;
+        top: 0;
+        font-size: xx-small;
+      }
+
+      .real-rs {
+        font-size: smaller;
+        margin-top: 0;
+      }
+
+      .btn {
+        -webkit-border-radius: 7;
+        -moz-border-radius: 7;
+        border-radius: 7px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        background: hsl(158, 36%, 37%);
+        padding: 5px;
+        text-decoration: none;
+      }
+    }
+
+    @media only screen and (min-width: 1440px) {
+      p {
+        width: 60%;
+        line-height: 2;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 500 700;
+        margin-bottom: 30px;
+      }
+
+      a {
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+
+      del {
+        margin-left: 20px;
+        position: relative;
+        bottom: 8px;
+      }
+
+
+
+
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+
+      .btn {
+        -webkit-border-radius: 7;
+        -moz-border-radius: 7;
+        border-radius: 7px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        background: hsl(158, 36%, 37%);
+        padding: 20px 20px 20px 20px;
+        text-decoration: none;
+      }
+
+
+      .btn:hover {
+        background: #b8603d;
+        text-decoration: none;
+      }
+
+
+
+
+      .home-div {
+        position: relative;
+        background-color: hsl(30, 38%, 92%);
+        width: 100%;
+      }
+
+
+      .product-image-div {
+        margin: auto;
+        position: absolute;
+        right: 50%;;
+        display: inline-block;
+        width: 540px;
+        height: 640px;
+        border-radius: 10px 0 0 10px;
+      }
+
+
+      .text-div {
+        margin: auto;
+        background-color: hsl(0, 0%, 100%);
+        position: absolute;
+        left: 50%;
+        display: inline-block;
+        height: 500px;
+        width: 400px;
+        padding: 70px;
+        border-radius: 0 10px 10px 0;
+      }
+
+
+
+
+      .topic {
+        font-family: 'Amiko', sans-serif;
+        margin-top: 0;
+      }
+
+      .t-c {
+        color: hsl(228, 12%, 48%);
+      }
+
+      .text-title {
+        font-family: 'Fraunces', serif;
+        color: hsl(212, 21%, 14%);
+        font-weight: 700;
+        width: 50%;
+      }
+
+
+      .p-img {
+        height: 640px;
+        width: 540px;
+        border-radius: 20px 0 0 25px;
+      }
+
+
+      .rs {
+        display: inline-block;
+      }
+
+
+      .real-rs {
+        font-family: 'Fraunces', serif;
+        color: hsl(158, 36%, 37%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="home-div">
+    <div class="product-image-div">
+      <img class="p-img" src="images/image-product-desktop.jpg" alt="product-image" >
+    </div>
+
+    <div class="text-div">
+      <h4 class="t-c topic">PERFUME</h4>
+      <h1 class="text-title"> Gabrielle Essence Eau De Parfum</h1>
+      <p class="t-c"> A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.
+      </p>
+      <h1 class="rs real-rs">$149.99</h1>
+      <del class="rs t-c">$169.99</del>
+      <a href="https://bootcamp.uxdesign.cc/responsive-design-from-desktop-to-mobile-95e009c1d502" class="btn">Add to Cart</a>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
